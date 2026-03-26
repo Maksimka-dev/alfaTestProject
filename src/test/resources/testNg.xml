@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="New_suite">
+    <listeners>
+        <listener class-name="retry.RetryTransformer"/>
+    </listeners>
+    <test name="LoginTest">
+        <classes>
+            <class name="tests.LoginTest" />
+        </classes>
+    </test>
+    <test name="UIStartPageTest">
+        <classes>
+            <class name="tests.UIStartPageTest" />
+        </classes>
+    </test>
+    <test name="MaskTest">
+        <classes>
+            <class name="tests.MaskTest" />
+        </classes>
+    </test>
+</suite>
