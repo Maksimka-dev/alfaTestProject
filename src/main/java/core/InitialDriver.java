@@ -13,6 +13,8 @@ public class InitialDriver {
 
     private static AppiumDriver driver;
 
+    private InitialDriver() {}
+
     public static AppiumDriver getDriver() {
         if (driver == null) {
             try {
