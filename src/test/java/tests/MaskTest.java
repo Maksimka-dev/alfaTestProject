@@ -4,6 +4,7 @@ import io.qameta.allure.Description;
 import org.testng.annotations.Test;
 import pages.StartPage;
 
+import static configs.ConfigReader.LOGIN_CAP;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MaskTest extends BaseTest {
@@ -13,8 +14,8 @@ public class MaskTest extends BaseTest {
     public void maskTest()  {
         StartPage startPage = new StartPage();
 
-        boolean isPasswordMasked = startPage.fillLoginFields("Login")
-                .fillPasswordFields("12345")
+        boolean isPasswordMasked = startPage.fillLoginFields(LOGIN_CAP.login())
+                .fillPasswordFields(LOGIN_CAP.wrongpass())
                 .maskVisabilityBtnClick()
                 .checkVisabilityPassword();
 
